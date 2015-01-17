@@ -1,0 +1,30 @@
+<template name="header">
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+	
+		<!-- 줄이지 못하는 영역 들 -->
+		<div class="navbar-header">
+			<!-- 축소시 나타나는 오른쪽 버튼 -->
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>		
+			
+			<!-- 기본 링크들 -->
+			<ul class="nav navbar-nav">
+			  <li><a class="navbar-brand" href="{{pathFor 'home'}}">판타지아</a></li>
+			  <li><a class="navbar-brand" href="{{pathFor 'test'}}">시험({{pathFor 'test'}})</a></li>
+			</ul>
+		</div>
+		
+		<!-- 로그인 버튼 -->
+		<div class="collapse navbar-collapse" id="navigation">
+			<ul class="nav navbar-nav navbar-right">
+			  {{> loginButtons}}
+			</ul>
+		</div>	
+	</div>
+</nav>
+</template>
