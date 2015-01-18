@@ -2,9 +2,8 @@
 
 accountsUIBootstrap3.setLanguage('ko'); // 한국어 메뉴 지원
 
-Template.디폴트.created = function() {
+Template["디폴트"].created = function() {
 	
-  console.log( 'CALL ....................');
   if (Accounts._verifyEmailToken) {
     Accounts.verifyEmail(Accounts._verifyEmailToken, function(err) {
       if (err != null) {
